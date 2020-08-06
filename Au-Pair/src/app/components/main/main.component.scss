@@ -1,0 +1,21 @@
+.offers{
+    display: flex;
+    justify-content: space-between;
+}
+.work{
+    width: 50%;
+    padding: 15px;
+    border: 1px solid transparent;
+    &:hover{
+        border: 1px solid black;
+    }
+    &__info{
+        img{
+            width: 100%;
+            height: auto;
+        }
+    } 
+    &__text{
+        font-family: Inter,sans-serif;
+    }
+}
