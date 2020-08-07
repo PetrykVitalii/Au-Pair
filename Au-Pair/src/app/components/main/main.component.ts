@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  detail:boolean = true
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

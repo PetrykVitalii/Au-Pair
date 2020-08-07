@@ -1,10 +1,71 @@
 <main class="main">
-    <section class="offers">
-        <div class="work">
-            <figure class="work__info">
-                <img src="../../../assets/images/main-images/banner_1200x630-min-uk.jpg" alt="">
-                <figcaption class="work__text">Ви молоді, комунікабельні, і найголовніше, любите дітей і все, що зв'язано з ними? До того ж Ви любите подорожувати? Чудово! Програма "Au-Pair" - те, що Вам треба! Au-Pair - найбільш популярна програма міжнародного культурного обміну, у якій бере участь молодь з усього світу. Ця недорога і вигідна програма - для тих, хто хоче без значних витрат виїхати в Німеччину на один рік, удосконалити німецьку мову в мовному середовищі, познайомитися з інтелектуальним і культурним життям гостьової країни, відвідати інші країни Європейського Союзу. Для багатьох Au-Pair програма дає можливість вступити і безкоштовно вчитися в найкращих ВНЗ Німеччини.</figcaption>
-            </figure>
-        </div>
+cre  <article class="offers">
+    <section class="work">
+      <figure class="work__info">
+        <img src="../../../assets/images/main-images/banner_1200x630-min-uk.jpg" alt="">
+        <figcaption class="work__text">Ви молоді, комунікабельні, і найголовніше, любите дітей і все, що зв'язано з
+          ними? До того ж Ви любите подорожувати? Чудово! Програма "Au-Pair" - те, що Вам треба! Au-Pair - найбільш
+          популярна програма міжнародного культурного обміну, у якій бере участь молодь з усього світу. Ця недорога і
+          вигідна програма - для тих, хто хоче без значних витрат виїхати в Німеччину на один рік, удосконалити німецьку
+          мову в мовному середовищі, познайомитися з інтелектуальним і культурним життям гостьової країни, відвідати
+          інші країни Європейського Союзу. Для багатьох Au-Pair програма дає можливість вступити і безкоштовно вчитися в
+          найкращих ВНЗ Німеччини.</figcaption>
+      </figure>
+      <ng-container *ngIf="detail; else elseTemplate">
+        <div class="work__change" (click)="detail = !detail">детальніше</div>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <section class="work__detail detail">
+          <h2 class="detail__title">Вимоги до Au-Pair кандидатів</h2>
+          <ul class="detail__list">
+            <li class="detail__item">Вік 18 до 26 років</li>
+            <li class="detail__item">Тривалість перебування від 6 до 12 місяців.</li>
+            <li class="detail__item">Базові знання німецької мови є обов'язковими.</li>
+            <li class="detail__item">Кандидати мають бути неодруженими та без дітей.</li>
+          </ul>
+        </section>
+        <section class="work__detail detail">
+          <h2 class="detail__title">Обов'язки кандидата</h2>
+          <ul class="detail__list">
+            <li class="detail__item">Допомога в догляді за дітьми.</li>
+            <li class="detail__item">Допомога в щоденній легкій домашньої роботі.</li>
+          </ul>
+        </section>
+        <section class="work__detail detail">
+          <h2 class="detail__title">Робочий час</h2>
+          <ul class="detail__list">
+            <li class="detail__item">Кандидат працює 30 годин на тиждень (макс. 6 годин на день).</li>
+            <li class="detail__item">Кандидат має право на 1,5 вільного від роботи дня на тиждень.</li>
+            <li class="detail__item">Кандидат також може бути задіяний як няня 2-3 вечори на тиждень.</li>
+            <li class="detail__item">Кандидат має право на 4 тижні оплачуваної відпустки за 1 рік перебування.</li>
+          </ul>
+        </section>
+        <section class="work__detail detail">
+          <h2 class="detail__title">Кишенькові гроші, страховка та мовні курси</h2>
+          <ul class="detail__list">
+            <li class="detail__item">Кандидат отримує кишенькові гроші від 260 євро раз на місяць.</li>
+            <li class="detail__item">Вартість страхування оплачує сім'я, яка приймає.</li>
+            <li class="detail__item">Сім'я оплачує курси німецької мови у розмірі до 50 євро на місяць.</li>
+            <li class="detail__item">Сім'я оплачує проїзд у міському транспорті до місця проведення мовних курсів та
+              назад.</li>
+            <li class="detail__item">Кандидат отримує посвідчення "Au-pair Ausweis".</li>
+          </ul>
+        </section>
+        <section class="work__detail detail">
+          <h2 class="detail__title">Вартість програми</h2>
+          <ul class="detail__list">
+            <li class="detail__item">Послуги агентства: 5000 грн.
+              <br>- 1-й внесок: 3000 грн. (метод. допомога в оформленні документів), після оплати яких видаються бланки
+              документів, інструкції щодо їх заповнення і т.д .;
+              <br>- 2-й внесок: 2000 грн. (консультаційно-пошукові послуги), які Ви оплачуєте до підписання контракту з
+              сім'єю, перед подачею документів в посольство для отримання візи;</li>
+            <li class="detail__item">Проїзд до Німеччини - від 1500 грн. до 2000 грн.</li>
+          </ul>
+        </section>
+        <a href="#" class="button-action button-shadow button-animate button-green">Подати заявку</a>
+        <div class="work__change" (click)="detail = !detail">згорнути</div>
+      </ng-template>
     </section>
+  </article>
 </main>
+<app-footer></app-footer>
