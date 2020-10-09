@@ -1,0 +1,65 @@
+<section class="work" (click)="openModal(template)">
+  <figure class="work__info">
+    <img [src]="article.img" alt="">
+    <figcaption class="work__text">{{article.title}}</figcaption>
+  </figure>
+  <ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">{{article.country}}</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <figure class="work__info">
+        <img [src]="article.img" alt="">
+      </figure>
+      <section class="work__detail detail" *ngIf="article.requirement">
+        <h2 class="detail__title">Вимоги до Au-Pair кандидатів</h2>
+        <ul class="detail__list">
+          <li *ngFor="let item of article.requirement" class="detail__item">{{item}}</li>
+        </ul>
+      </section>
+      <section class="work__detail detail" *ngIf="article.responsibility">
+        <h2 class="detail__title">Обов'язки кандидата</h2>
+        <ul class="detail__list">
+          <li *ngFor="let item of article.responsibility" class="detail__item">{{item}}</li>
+        </ul>
+      </section>
+      <section class="work__detail detail" *ngIf="article.workTime">
+        <h2 class="detail__title">Робочий час</h2>
+        <ul class="detail__list">
+          <li *ngFor="let item of article.workTime" class="detail__item">{{item}}</li>
+        </ul>
+      </section>
+      <section class="work__detail detail" *ngIf="article.detail">
+        <h2 class="detail__title">Кишенькові гроші, страховка та мовні курси</h2>
+        <ul class="detail__list">
+          <li *ngFor="let item of article.detail" class="detail__item">{{item}}</li>
+        </ul>
+      </section>
+      <section class="work__detail detail" *ngIf="article.price">
+        <h2 class="detail__title">Вартість програми</h2>
+        <ul class="detail__list">
+          <li *ngFor="let item of article.price" class="detail__item">{{item}}</li>
+        </ul>
+      </section>
+      <section class="work__detail detail" *ngIf="article.preference">
+        <h2 class="detail__title">Переваги</h2>
+        <ul class="detail__list">
+          <li *ngFor="let item of article.preference" class="detail__item">{{item}}</li>
+        </ul>
+      </section>
+      <ng-container *ngIf="article.link; else elseTemplate">
+        <a href="http://lviv.dinstitut.com/" target="_blank"
+          class="button-action button-shadow button-animate button-green">Курси німецької стаціонар</a>
+        <a href="http://courses.dinstitut.com/lviv" target="_blank"
+          class="button-action button-shadow button-animate button-green">Курси німецької онлайн</a>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <a href="https://au-pair.bitrix24.ua/pub/form/11_onlayn_zayavka/87np12/" target="_blank"
+          class="button-action button-shadow button-animate button-green">Подати заявку</a>
+      </ng-template>
+    </div>
+  </ng-template>
+</section>

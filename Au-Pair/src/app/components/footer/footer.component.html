@@ -1,1 +1,87 @@
-<p>footer works!</p>
+<div class="footer">
+  <h3 class="footer__title">Контактні дані</h3>
+  <div class="wrap-contact">
+    <div class="contact">
+    
+      <h5 class="contact__name">Тарас:</h5>
+
+      <div class="contact__number"><a class="contact__link" href="tel:+49 6561 89 13 499" itemprop="telephone">+49 6561
+          89 13 499</a></div>
+      <div class="contact__number"><a class="contact__link" href="tel:+38 097 74 94 628" itemprop="telephone">+38 097 74
+          94 628</a></div>
+    </div>
+    <div class="contact">
+      <h5 class="contact__name">Наталія:</h5>
+      <div class="contact__number"><a class="contact__link" href="tel:+38 067 373 08 95" itemprop="telephone">+38 067
+          373 08 95</a></div>
+      <div class="contact__number"><a class="contact__link" href="tel:+38 063 307 3996" itemprop="telephone">+38 063 307
+          3996</a></div>
+    </div>
+    <div class="contact">
+      <h5 class="contact__name">Світлана:</h5>
+      <div class="contact__number"><a class="contact__link" href="tel:+38 067 37 37 948" itemprop="telephone">+38 067 37
+          37 948</a></div>
+      <div class="contact__number"><a class="contact__link" href="tel:+38 063 417 61 53" itemprop="telephone">+38 063
+          417 61 53</a></div>
+    </div>
+  </div>
+  <h3 class="footer__title">Ми в соціальних мережах</h3>
+  <div class="wrap-social">
+    <div class="site">
+      <p><a class="site__link" target="_blank" href="https://www.msp.gov.ua/documents/3062.html">Ліцензія</a>
+      </p>
+      <h4 class="site__title">Мовні курси:</h4>
+      <p><a target="_blank" class="site__link" href="http://aupair-community.com/education-course">Au-Pair education</a>
+      </p>
+      <h4 class="site__title">Основний сайт:</h4>
+      <p><a target="_blank" class="site__link" href="http://aupair-community.com/">Au-Pair community</a></p>
+      <h4 class="site__title">Наша пошта:</h4>
+      <p><a class="site__link" href="mailto:office@aupair-community.com">office@aupair-community.com</a></p>
+    </div>
+    <div class="social">
+      <a target="_blank" href="https://www.facebook.com/groups/1450364271952059/"
+        class="social__icon social__icon--fb"></a>
+      <a target="_blank" href="https://twitter.com/serkistaras" class="social__icon social__icon--tw"></a>
+      <a target="_blank" href="https://www.instagram.com/aupaircommunity/?hl=uk"
+        class="social__icon social__icon--in"></a>
+    </div>
+  </div>
+
+  <aside class="legal">
+    <p class="legal__order" (click)="openModal(template,false)">Юридична інформація</p>
+    <p class="legal__order" (click)="openModal(template,true)">Угода про обробку персональних даних</p>
+  </aside>
+
+  <ng-template #template>
+    <div class="modal-header">
+      <ng-container *ngIf="status; else elseTemplate">
+        <h4 class="modal-title pull-left">Угода про обробку персональних даних</h4>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <h4 class="modal-title pull-left">Юридична інформація</h4>
+      </ng-template>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <ng-container *ngIf="status; else elseTemplate2">
+        <p>Заповнюючи форму зворотного зв'язку, я (клієнт), підтверджую повноту, справжність і достовірність наданої
+          інформації, а також відповідно до Закону України «Про захист персональних даних» від 1 червня 2010 року, №
+          2297-УІ надаю свою згоду на обробку моїх персональних даних, що містяться у контактній формі, лише для
+          внутрішнього використання компанією «Au-Pair Community» ФОП Серкіс Т.З.</p>
+      </ng-container>
+      <ng-template #elseTemplate2>
+        <p>ФОП Серкіс Тарас Зіновійович </p>
+        <p>код ЄДРПОУ 3067006996,</p>
+        <p>Юридична адреса: Україна, 80700, Львівська</p>
+        <p>обл., Золочівський район, місто Золочів,</p>
+        <p>вул. Літописця Нестора, буд. 15А.</p>
+        <p>IBAN: UA543253210000026006053705890 в ЗВ ЗГРУ Приват Банк МФО 325321 </p>
+        <p>IBAN: UA173220010000026003300004388 в МОНОБАНК - АТ «УНІВЕРСАЛ БАНК» </p>
+        <p>Тел.: +380977494628,</p>
+        <p>E-mail: support@aupair-community.com</p>
+      </ng-template>
+    </div>
+  </ng-template>
+</div>

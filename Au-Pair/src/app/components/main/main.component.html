@@ -1,71 +1,85 @@
 <main class="main">
-cre  <article class="offers">
-    <section class="work">
-      <figure class="work__info">
-        <img src="../../../assets/images/main-images/banner_1200x630-min-uk.jpg" alt="">
-        <figcaption class="work__text">Ви молоді, комунікабельні, і найголовніше, любите дітей і все, що зв'язано з
-          ними? До того ж Ви любите подорожувати? Чудово! Програма "Au-Pair" - те, що Вам треба! Au-Pair - найбільш
-          популярна програма міжнародного культурного обміну, у якій бере участь молодь з усього світу. Ця недорога і
-          вигідна програма - для тих, хто хоче без значних витрат виїхати в Німеччину на один рік, удосконалити німецьку
-          мову в мовному середовищі, познайомитися з інтелектуальним і культурним життям гостьової країни, відвідати
-          інші країни Європейського Союзу. Для багатьох Au-Pair програма дає можливість вступити і безкоштовно вчитися в
-          найкращих ВНЗ Німеччини.</figcaption>
+
+  <h2 class="main__line">Програми Au Pair:</h2>
+  <article class="offers">
+    <app-offer class="offers__block" *ngFor="let article of articles" [article]='article'></app-offer>
+  </article>
+
+  <h2 class="main__line">ЧОМУ ОБИРАЮТЬ НАС !</h2>
+  <article class="choose">
+    <section class="choose__answer answer">
+      <figure class="answer__icon">
+        <img class="answer__img" src="../../../assets/images/main-images/education.png" alt="">
       </figure>
-      <ng-container *ngIf="detail; else elseTemplate">
-        <div class="work__change" (click)="detail = !detail">детальніше</div>
-      </ng-container>
-      <ng-template #elseTemplate>
-        <section class="work__detail detail">
-          <h2 class="detail__title">Вимоги до Au-Pair кандидатів</h2>
-          <ul class="detail__list">
-            <li class="detail__item">Вік 18 до 26 років</li>
-            <li class="detail__item">Тривалість перебування від 6 до 12 місяців.</li>
-            <li class="detail__item">Базові знання німецької мови є обов'язковими.</li>
-            <li class="detail__item">Кандидати мають бути неодруженими та без дітей.</li>
-          </ul>
-        </section>
-        <section class="work__detail detail">
-          <h2 class="detail__title">Обов'язки кандидата</h2>
-          <ul class="detail__list">
-            <li class="detail__item">Допомога в догляді за дітьми.</li>
-            <li class="detail__item">Допомога в щоденній легкій домашньої роботі.</li>
-          </ul>
-        </section>
-        <section class="work__detail detail">
-          <h2 class="detail__title">Робочий час</h2>
-          <ul class="detail__list">
-            <li class="detail__item">Кандидат працює 30 годин на тиждень (макс. 6 годин на день).</li>
-            <li class="detail__item">Кандидат має право на 1,5 вільного від роботи дня на тиждень.</li>
-            <li class="detail__item">Кандидат також може бути задіяний як няня 2-3 вечори на тиждень.</li>
-            <li class="detail__item">Кандидат має право на 4 тижні оплачуваної відпустки за 1 рік перебування.</li>
-          </ul>
-        </section>
-        <section class="work__detail detail">
-          <h2 class="detail__title">Кишенькові гроші, страховка та мовні курси</h2>
-          <ul class="detail__list">
-            <li class="detail__item">Кандидат отримує кишенькові гроші від 260 євро раз на місяць.</li>
-            <li class="detail__item">Вартість страхування оплачує сім'я, яка приймає.</li>
-            <li class="detail__item">Сім'я оплачує курси німецької мови у розмірі до 50 євро на місяць.</li>
-            <li class="detail__item">Сім'я оплачує проїзд у міському транспорті до місця проведення мовних курсів та
-              назад.</li>
-            <li class="detail__item">Кандидат отримує посвідчення "Au-pair Ausweis".</li>
-          </ul>
-        </section>
-        <section class="work__detail detail">
-          <h2 class="detail__title">Вартість програми</h2>
-          <ul class="detail__list">
-            <li class="detail__item">Послуги агентства: 5000 грн.
-              <br>- 1-й внесок: 3000 грн. (метод. допомога в оформленні документів), після оплати яких видаються бланки
-              документів, інструкції щодо їх заповнення і т.д .;
-              <br>- 2-й внесок: 2000 грн. (консультаційно-пошукові послуги), які Ви оплачуєте до підписання контракту з
-              сім'єю, перед подачею документів в посольство для отримання візи;</li>
-            <li class="detail__item">Проїзд до Німеччини - від 1500 грн. до 2000 грн.</li>
-          </ul>
-        </section>
-        <a href="#" class="button-action button-shadow button-animate button-green">Подати заявку</a>
-        <div class="work__change" (click)="detail = !detail">згорнути</div>
-      </ng-template>
+      <figcaption class="answer__text">Можливість занурення в мовне середовище
+      </figcaption>
+    </section>
+    <section class="choose__answer answer">
+      <figure class="answer__icon">
+        <img class="answer__img" src="../../../assets/images/main-images/experience.png" alt="">
+      </figure>
+      <figcaption class="answer__text">10-річний досвід роботи
+      </figcaption>
+    </section>
+    <section class="choose__answer answer">
+      <figure class="answer__icon">
+        <img class="answer__img" src="../../../assets/images/main-images/reliability.jpg" alt="">
+      </figure>
+      <figcaption class="answer__text">Задоволенні <a class="answer__link" href="http://aupair-community.com/">клієнти</a>
+      </figcaption>
     </section>
   </article>
+
+  <h2 class="main__line">НАШІ ПОСЛУГИ НА УЧАСТЬ В ПРОГРАМІ AU-PAIR:</h2>
+  <article class="service">
+    <ul class="service__list">
+      <li class="service__item">Ввідне інформаційне консультування (інформація щодо прав, обов’язків та діяльності у
+        якості Au-Pair у
+        Німеччині).</li>
+      <li class="service__item">Надання, перевірка, редагування та переклад необхідних документів для участі в програмі
+        Au-Pair.</li>
+      <li class="service__item">Інформаційно- консультаційний супровід, впродовж всього терміну підготовки до участі в
+        програмі.</li>
+      <li class="service__item">Підбір приймаючої сім'ї.</li>
+      <li class="service__item">Налагодження та перевірка контактів із приймаючою стороною (Au-Pair-агенцією в країні
+        перебування та
+        приймаючою сім'єю).</li>
+      <li class="service__item">Інформаційно- консультаційний супровід на етапі підготовки повного пакета документів від
+        сім’ї (контракт,
+        запрошення, страховка та ін.).</li>
+      <li class="service__item">Підготовка документів необхідних на подачу для відкриття візи в консульстві (допомога в
+        заповненні візових
+        заяв, перевірка, редагування та переклад інших необхідних документів, а також за бажанням індивідуальна
+        підготовка до співбесіди в консульстві з викладачем німецької мови).</li>
+      <li class="service__item">Допомога в організації поїздки до від’їзду з України.</li>
+      <li class="service__item">Надання контактів інших учасників які беруть участь в програмі, або вже є в Німеччині
+        (за двосторонньої згоди).
+      </li>
+      <li class="service__item">Підтримка зі сторони агенції протягом всього часу перебування в Німеччині. </li>
+    </ul>
+  </article>
+
+  <h2 class="main__line"> ПОСЛУГИ НАШИХ ПАРТНЕРІВ В НІМЕЧЧИНІ:</h2>
+  <article class="service">
+    <ul class="service__list">
+      <li class="service__item">Агентство-партнер запрошує до себе сім‘ю для співбесіди, а також перевіряє житлові та
+        інші умови життя сім‘ї та надає дійові консультації з приймаючою сім’єю, яка бажає прийняти у себе Au-Pair
+        претендента та надає сім’ї інформацію щодо прав і обов’язків.</li>
+      <li class="service__item">Агентство-партнер надає консультації Au-Pair претендентам, які стосуються їх перебування
+        у Німеччині. Консультації охоплюють допомогу в пошуку мовних курсів, регулярних культурних, суспільних та
+        консультативних заходів.</li>
+      <li class="service__item">В проблемних ситуаціях агентство-партнер допомагає Au-Pair у труднощах з приймаючою
+        сім’єю та намагається допомогти у рішенні проблеми. Якщо проблема не вирішується, агентство-партнер допомагає
+        знайти Au-Pair претенденту іншу приймаючу сім’ю.</li>
+      <li class="service__item">Агентство-партнер пропонує безкоштовні навчальні курси, такі як курси надання першої
+        медичної допомоги.</li>
+      <li class="service__item">Au-Pair отримує номер гарячої лінії для екстрених випадків (!).</li>
+    </ul>
+  </article>
+
+  <article class="question">
+    <h2 class="main__line"> Найбільш популярні запитання:</h2>
+    <app-question *ngFor="let info of moreInfo" [info]='info'></app-question>
+  </article>
+
 </main>
-<app-footer></app-footer>

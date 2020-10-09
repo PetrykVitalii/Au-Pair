@@ -1,0 +1,106 @@
+.footer {
+  box-shadow: 0 -3px 0px rgba(0, 0, 0, 0.4);
+
+  &__title {
+    text-align: center;
+    padding: 25px 0;
+  }
+}
+
+.wrap-contact {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  @media screen and (max-width:600px){
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contact {
+  text-align: center;
+  width: 180px;
+  padding: 10px;
+
+  &__link {
+    padding: 5px;
+    color: black;
+
+    &:hover {
+      color: rgb(150, 3, 3);
+    }
+  }
+}
+
+.wrap-social {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  @media screen and (max-width:700px){
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: space-around;
+  @media screen and (max-width:600px){
+    transform: scale(0.8,0.8);
+  }
+
+  &__icon {
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-image: url(../../../assets/images/footer-images/free-social-media-icons.png);
+    
+
+    &--fb {
+      background-position: 1385px 470px;
+
+      &:hover {
+        background-position: 1385px 1370px;
+      }
+    }
+
+    &--tw {
+      background-position: 1535px 170px;
+
+      &:hover {
+        background-position: 1535px 1070px;
+      }
+    }
+
+    &--in {
+      background-position: 1840px 325px;
+
+      &:hover {
+        background-position: 1840px 1225px;
+      }
+    }
+  }
+}
+
+.site {
+  &__link {
+    font-size: 20px;
+    color: black;
+
+    &:hover {
+      color: rgb(150, 3, 3);
+    }
+  }
+}
+
+.legal{
+  &__order{
+    text-align: center;
+    color: rgb(131, 131, 131);
+    cursor: pointer;
+    &:hover{
+      color: black;
+    }
+  }
+}

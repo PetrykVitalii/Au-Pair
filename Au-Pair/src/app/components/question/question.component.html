@@ -1,0 +1,4 @@
+<div class="info" (click)="status = !status">
+    <h5 class="info__question">{{info.question}}</h5>
+    <p *ngIf="status" class="info__answer">{{info.answer}}</p>
+</div>
